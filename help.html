@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="res/n-logo.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js">
+    </script>
+    <title>Help!</title>
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="text">
+            <h1>Not Sure Where To Begin?</h1>
+                <p>
+                    <p class="txt">Hello students this is Nitin and wanted to clear your all problems you are facing in this website. This website is flexible for your users there should be no problem but here are some pre-asked questions from where you can find your solution and if not let me know it on my <u><a href="#" style="text-decoration: none; color: #222;">instagram</a></u>.</p>
+                    <ul>
+                        <li class="q1">From where I get my ncert book questions answere?</li>
+                        <p class="q1p"><a href="index.html">click here</a> by which you will reach to home page then scroll down to your class where you will see ncert solutions option from where you can access the same.</p>
+                        <li class="q2">I'm in board class and wanted more usefull materials?</li>
+                        <p class="q2p">In <a href="index.html">home page</a> on the top you will see more stuff option by which you can access more usefull material.</p>
+                        <li class="q3">From where I get cbse usefull notifications for me?</li>
+                        <p class="q3p">In <a href="index.html">home page</a> on the top you will see cbse option by which you can access all cbse new updates.</p>
+                        <li class="q4">How can I contact you?</li>
+                        <p class="q4p">At the most bottom of the <a href="index.html">home page</a> you will see a footer in which there is a option of contact us by which you can contact us or just <a href="contact-me.html">click here</a>.</p>
+                    </ul>
+                </p>
+        </div>
+        <div class="img">
+            <img src="res/help.png" alt="">
+        </div>
+
+    </div>
+</body>
+</html>
+
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* on selecting text */
+::selection{
+    background-color: rgba(4, 156, 100, 0.5);
+}
+
+.container{
+    display: inline;
+}
+
+h1{
+    color: #fff;
+    background-color: #04AA6D;
+    padding: 10px 20px;
+}
+
+.container .text{
+    width: 50%;
+    position: absolute;
+    top: 15%;
+    left: 30px;
+}
+
+.container .text .q1,.q2,.q3,.q4, ul li,.txt{
+    margin-top: 25px;
+    font-size: 1.2em;
+}
+
+.container .text ul li{
+    margin-top: 10px;
+    cursor: help;
+}
+
+.container .img img{
+    margin-top: 5%;
+    height: 500px;
+    width: 700px;
+    float: right;
+    transition: 0.5s;
+    animation: up 2.5s linear infinite;
+}
+
+@keyframes up{
+    0%{
+        margin-top: 4%;
+    }
+
+    50%{
+        margin-top: 5%;
+    }
+
+    100%{
+        margin-top: 4%;
+    }
+}
+
+.q1p,.q2p,.q3p,.q4p{
+    display: none;
+    color: #222;
+}
+</style>
+
+<script>
+
+$(document).ready(function(){
+    $(".q1").click(function(){
+      $(".q1p").toggle();
+    });
+  });
+
+  
+  $(document).ready(function(){
+    $(".q2").click(function(){
+      $(".q2p").toggle();
+    });
+  });
+  $(document).ready(function(){
+    $(".q3").click(function(){
+      $(".q3p").toggle();
+    });
+  });
+  $(document).ready(function(){
+    $(".q4").click(function(){
+      $(".q4p").toggle();
+    });
+  });
+</script>

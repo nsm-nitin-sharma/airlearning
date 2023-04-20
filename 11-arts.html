@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="res/n-logo.png">
+    <title>Class eleventh 11 arts ncert main subjects</title>
+</head>
+<body>
+    
+    <div class="container">
+       <div class="left"></div>
+       <div class="right"></div>
+    </div>
+
+    <div class="content">
+        <h1><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-book-half" viewBox="0 0 16 16">
+            <path d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+          </svg> Subjects Available</h1>
+        <p>We provide main ncert subjects solutions available for this stream.</p>
+        <div class="book">
+            <div class="eng">Economics</div>
+            <div class="hin">Hindi</div>
+            <div class="his">History</div>
+            <div class="sci">P.Science</div>
+            <div class="soc">Geography</div>
+            <div class="ex">Lorem</div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+:root {
+    --blue: #96D4D4;
+    --white: #fff;
+    --green-dark: #05a067;
+    --green: #04AA6D;
+    --black: #282A35;
+    --pink: #FFC0C7;
+    --pink-dark: #ffb3bc;
+    --light-pink:  #ffe6f2;
+    --yellow: #FFF4A3;
+    --yellow-dark: #faeb75;
+    --peech-blue: #D9EEE1;
+    --light-grey: #F3ECEA;
+    --toolight-green: #D9EEE1;
+    --red: rgb(255, 35, 35);
+    --purple: #9763f6;
+  }
+
+  
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* on selecting text */
+::selection{
+    background-color: rgba(4, 156, 100, 0.5);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left{
+    height: 100vh;
+    width: 50vw;
+    background-color: var(--green);
+}
+
+.right{
+    height: 100vh;
+    width: 50vw;
+    background-color: var(--yellow-dark);
+}
+
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    height: 90vh;
+    width: 90vw;
+    border-radius: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.content h1{
+    font-size: 2.5em;
+    color: var(--green);
+}
+
+.content p{
+    margin-top: -90px;
+    font-weight: 500;
+}
+
+.book{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5vh;
+}
+
+.eng,.hin,.his,.sci,.soc,.ex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    width: 20vw;
+    font-size: 1.5em;
+    font-weight: 500;
+    margin: 0 20px 20px 0px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.eng:hover,.hin:hover,.his:hover,.sci:hover,.soc:hover,.ex:hover{
+    font-size: 1.7em;
+}
+
+.eng{
+    background-color: var(--pink);
+}
+
+.hin{
+    background-color: var(--yellow);
+}
+
+.his{
+    background-color: var(--green);
+    color: var(--white);
+}
+
+.sci{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.soc{
+    background-color: var(--blue);
+}
+
+.ex{
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+</style>

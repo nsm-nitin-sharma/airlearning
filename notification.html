@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="res/n-logo.png">
+    <title>Notifications</title>
+</head>
+<body>
+    <div class="content">
+        <h1>Latest notifications</h1>
+
+        <div class="text">
+
+        <span>02/05/2023</span><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem nisi iste quisquam, sequi harum enim voluptatem dolorum ab praesentium quos. Facilis explicabo mollitia accusantium non blanditiis deserunt, earum eos? Sit!</p>
+        <span>01/05/2023</span><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, qui at. Magni perspiciatis neque maiores fugit, distinctio minus corporis sequi ut accusantium, molestias autem quasi, iure praesentium id laboriosam atque!</p>
+        <span>31/04/2023</span><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia aperiam totam reprehenderit suscipit minima voluptate! Et consequatur maxime officiis, enim magni aut reiciendis, vitae animi sit, blanditiis officia aspernatur vel.</p>
+        <span>30/04/2023</span><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus deserunt, nihil quas explicabo repudiandae ullam recusandae tempore nesciunt? Voluptatem sunt vel corporis corrupti aperiam! Corporis culpa doloribus veritatis officia eaque.</p>
+        
+
+        </div>
+        <div class="img"> <img src="res/notification.png" alt=""> </div>
+    </div>
+</body>
+</html>
+
+<style>
+      
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* on selecting text */
+::selection{
+    background-color: rgba(4, 156, 100, 0.5);
+}
+
+.content{
+    display: inline;
+}
+
+.content .text{
+    width: 50%;
+}
+
+.content span{
+        color: red;
+}
+
+h1{
+    margin: 20px 20px;
+    color: #fff;
+    background-color: #04AA6D;
+    padding: 10px 20px;
+}
+
+span, p{
+    margin: 30px 30px;
+}
+
+.content .img img{
+    position: absolute;
+    top: 15%;
+    right: 20px;
+    height: 600px;
+    width: 600px;
+    transition: 0.5s;
+    animation: shake 0.5s linear infinite;
+}
+
+@keyframes shake{
+    0%{
+        rotate: 2deg;
+    }
+
+    50%{
+        rotate: -2deg;
+
+    }
+
+    100%{
+        rotate: 2deg;
+    }
+}
+
+</style>
+
