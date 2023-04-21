@@ -641,6 +641,10 @@ background-color: var(--green);
         padding: 0; */
         width: 100vw !important;
     }
+    
+    .sec-six .class, .sec-seven .class, .sec-eighth .class, .sec-nine .class, .sec-ten .class, .sec-eleven .class, .sec-twelfth .class{ 
+        font-size: 5em;
+    }
 
     .left{
         margin: 0;
