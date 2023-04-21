@@ -5,37 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="res/n-logo.png">
-    <title>Class seventh 7 ncert all books</title>
+    <title>Class 7 seventh math ncert all chapters.</title>
 </head>
 <body>
     
     <div class="container">
-       <div class="left"></div>
-       <div class="right"></div>
-    </div>
+        <div class="left"></div>
+        <div class="right"></div>
+     </div>
 
-    <div class="content">
+     <div class="content">
         <h1><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-book-half" viewBox="0 0 16 16">
             <path d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-          </svg> Books Available</h1>
-        <p>We provide all the latest ncert book solutions available for this class.</p>
-        <div class="book">
-            <div class="eng" onclick="window.open('7-english.html','_self')">English</div>
-            <div class="hin" onclick="window.open('7-hindi.html','_self')">Hindi</div>
-            <div class="mat" onclick="window.open('7-math.html','_self')">Math</div>
-            <div class="sci" onclick="window.open('7-science.html','_self')">Science</div>
-            <div class="soc" onclick="window.open('7-social.html','_self')">Social</div>
-            <div class="ex">Lorem</div>
-        </div>
-    </div>
+          </svg> Math's Chapters</h1>
+        <p>We provide all chapters of ncert for this class.</p>
+        <ul>
+            <li class="l1">Integers</li>
+            <li class="l2">Fractions and Decimals</li>
+            <li class="l3">Data Handling</li>
+            <li class="l4">Simple Equations</li>
+            <li class="l5">Lines and Angles</li>
+            <li class="l6">The Triangle and Its Properties</li>
+            <li class="l7">Congruence of Triangles</li>
+            <li class="l8">Comparing Quantities</li>
+            <li class="l9">Rational Numbers</li>
+            <li class="l10">Practical Geometry</li>
+            <li class="l11">Perimeter and Area</li>
+            <li class="l12">Algebraic Expression</li>
+            <li class="l1">Exponents and Power</li>
+            <li class="l2">Symmetry</li>
+            <li class="l3">Visualising Solid Shape</li>
+        </ul>
+     </div>
 
 </body>
 </html>
 
 <style>
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
-
 
 :root {
     --blue: #96D4D4;
@@ -72,6 +78,40 @@ body{
     background-color: rgba(4, 156, 100, 0.5);
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    /* background-color: var(--green);  */
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--green); 
+    /* background-color: var(--white); */
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--green-dark); 
+  }
+
+  ::-webkit-scrollbar-button{
+    background-color: red;
+  }
+
+  ::-webkit-scrollbar-button:hover{
+    background-color: var(--purple);
+  }
+
+
+
 .container{
     display: flex;
     justify-content: center;
@@ -104,6 +144,8 @@ body{
     align-items: center;
     text-align: center;
     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.5);
+    overflow-y: scroll;
+    padding: 5vh 0;
 }
 
 .content h1{
@@ -112,60 +154,81 @@ body{
 }
 
 .content p{
-    margin-top: -90px;
-    font-weight: 500;
+    /* margin-top: -25vh; */
+    margin-top: 2vh;
+    /* font-weight: 500; */
+    font-weight: 600;
+
 }
 
-.book{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-top: -5vh;
-}
+/* ul{
+    margin-top: -25vh;
+} */
 
-.eng,.hin,.mat,.sci,.soc,.ex{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 25vh;
-    width: 20vw;
-    font-size: 1.5em;
-    font-weight: 500;
-    margin: 0 20px 20px 0px;
+ul li{
+    list-style-type: decimal;
+    /* background-color: #04AA6D; */
+    margin-top: 30px;
+    padding: 10px 40px;
+    /* color: var(--white); */
+    list-style-position: inside;
     cursor: pointer;
-    transition: 0.5s;
+    font-weight: 600;
+
 }
 
-.eng:hover,.hin:hover,.mat:hover,.sci:hover,.soc:hover,.ex:hover{
-    font-size: 1.7em;
-}
-
-.eng{
+.l1{
     background-color: var(--pink);
 }
 
-.hin{
+.l2{
     background-color: var(--yellow);
 }
 
-.mat{
+.l3{
     background-color: var(--green);
-    color: var(--white);
+    color: #fff;
 }
 
-.sci{
+.l4{
     background-color: var(--black);
-    color: var(--white);
+    color: #fff;
 }
 
-.soc{
+.l5{
     background-color: var(--blue);
 }
 
-.ex{
+.l6{
     background-color: var(--purple);
-    color: var(--white);
+    color: #fff;
+}
+
+.l7{
+    background-color: var(--pink);
+}
+
+.l8{
+    background-color: var(--yellow);
+}
+
+.l9{
+    background-color: var(--green);
+    color: #fff;
+}
+
+.l10{
+    background-color: var(--black);
+    color: #fff;
+}
+
+.l11{
+    background-color: var(--blue);
+}
+
+.l12{
+    background-color: var(--purple);
+    color: #fff;
 }
 
 </style>
