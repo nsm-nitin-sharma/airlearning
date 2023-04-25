@@ -9,11 +9,11 @@
     <script src="process.js"></script>
     <link rel="icon" type="image/x-icon" href="res/n-logo.png">
     <link rel="stylesheet" href="style.css">
-    <title>AirLearning</title>
+    <title>AirSchools</title>
 </head>
 <body>
     <div class="navbar" id="navbar">
-        <a href="index.html"><span class="logo">air learning</span></a>
+        <a href="index.html"><span class="logo">air schools</span></a>
         <div class="menubr">
             <span>Menu <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                 <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
@@ -22,8 +22,8 @@
                 <ul>
                     <li onclick="window.open('notification.html','_self')">Notification</li>
                     <li onclick="window.open('cbse.html','_self')">Cbse</li>
-                    <li>More Stuff</li>
-                    <li onclick="window.open('help.html','_self');">Help</li>
+                    <li><a href="#scroller">More Stuff</a></li>
+                    <li><a href="#accordion">Help</a></li>
                 </ul>
             </div>
         </div>
@@ -37,8 +37,8 @@
                     <li>Notes</li>
                     <li onclick="window.open('notification.html','_self')">Notification</li>
                     <li onclick="window.open('cbse.html','_self')">Cbse</li>
-                    <li>More Stuff</li>
-                    <li onclick="window.open('help.html','_self');">Help</li>
+                    <li><a href="#scroller">More Stuff</a></li>
+                    <li><a href="#accordion">Help</a></li>
                 </ul>
             </div>
         </div>
@@ -49,7 +49,7 @@
                 <li class="pro" onclick="alert('Pro Mode Is Locked Now')">Pro</li>
                 <li class="one">MCQ</li>
                 <li class="two">Notes</li>
-                <li class="three" onclick="alert('NSM is a organisation underwhich AirLearning comes.')">NSM</li>
+                <li class="three" onclick="alert('AirSchools is owned by NSM')">NSM</li>
             </ul>
         </div>
     </div>
@@ -58,8 +58,10 @@
         <div class="content">
             <span class="main-text">Learn To Win</span>
             <p class="low-text">Earth is surrounded with knowledge like air.</p>
-            <input type="search" placeholder="Search from this website" id="searchbox" onkeyup="alert('There is nothing to search from this webpage')">
-            <p class="sub-text" onclick="window.open('help.html','_self');">Not Sure Were To Begin?</p>
+            <div class="autocomplete" style="width:300px;">
+            <input type="search" placeholder="Search what we have in this website" id="searchbox">
+            </div>
+            <p class="sub-text"><a href="#accordion">Not Sure Were To Begin?</a></p>
         </div>  
     </section>
 
@@ -175,7 +177,7 @@
         </div>
     </section>
 
-    <section class="scroller">
+    <section class="scroller" id="scroller">
         <div class="container">
             <a href=""><div class="one">Video</div></a>
             <a href=""><div class="two">Notes</div></a>
@@ -200,8 +202,98 @@
           </div>
     </section>
 
+    <section class="qContainer" id="accordion">
+        <h1><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-patch-question-fill" viewBox="0 0 16 16">
+            <path d="M5.933.87a2.89 2.89 0 0 1 4.134 0l.622.638.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636zM7.002 11a1 1 0 1 0 2 0 1 1 0 0 0-2 0zm1.602-2.027c.04-.534.198-.815.846-1.26.674-.475 1.05-1.09 1.05-1.986 0-1.325-.92-2.227-2.262-2.227-1.02 0-1.792.492-2.1 1.29A1.71 1.71 0 0 0 6 5.48c0 .393.203.64.545.64.272 0 .455-.147.564-.51.158-.592.525-.915 1.074-.915.61 0 1.03.446 1.03 1.084 0 .563-.208.885-.822 1.325-.619.433-.926.914-.926 1.64v.111c0 .428.208.745.585.745.336 0 .504-.24.554-.627z"/>
+          </svg> Frequently Asked Questions</h1>
+        <!-- <p>Here are some pre-asked questions you can checkout.</p> -->
+        <div class="question">
+            <button class="accordion">What is dolor sit amet, consectetur adipisicing elit</button>
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            
+            <button class="accordion">How is it dolor sit amet, consectetur adipisicing elit</button>
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            
+            <button class="accordion">Lorem ipsum dolor sit amet, consectetur adipisicing elit</button>
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <button class="accordion">Lorem ipsum dolor sit amet, consectetur adipisicing elit</button>
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <button class="accordion">Lorem ipsum dolor sit amet, consectetur adipisicing elit</button>
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <button class="accordion">Lorem ipsum dolor sit amet, consectetur adipisicing elit</button>
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- tabs section  -->
+    <!-- <section class="tabs">
+      <button class="tablink" onclick="openPage('Home', this, '#f44336')">Home</button>
+      <button class="tablink" onclick="openPage('News', this, '#04AA6D')" id="defaultOpen">News</button>
+      <button class="tablink" onclick="openPage('Contact', this, '#2196F3')">Contact</button>
+      <button class="tablink" onclick="openPage('About', this, '#ff5722')">About</button>
+      <div id="Home" class="tabcontent">
+        <h3>Home</h3>
+        <p>Home is where the heart is..</p>
+      </div>
+      
+      <div id="News" class="tabcontent">
+        <h3>News</h3>
+        <p>Some news this fine day!</p> 
+      </div>
+      
+      <div id="Contact" class="tabcontent">
+        <h3>Contact</h3>
+        <p>Get in touch, or swing by for a cup of coffee.</p>
+      </div>
+      
+      <div id="About" class="tabcontent">
+        <h3>About</h3>
+        <p>Who we are and what we do.</p>
+      </div>
+    </section> -->
+    
+
+    <section class="testimonial">
+      <div class="users">
+        <div class="overlay"></div>
+        <div class="headerT"><h1>Testimonial</h1></div>
+        <div class="testContainer">
+          <div class="testRow">
+            <div class="testItem">
+              <img src="res/me.png" alt="" srcset="">
+              <p>Meet Nitin, the proud owner of his own company with a focus on the education sector. Nitin is a skilled developer with a passion for using technology to transform the way people learn. His commitment to providing exceptional service to all students is truly inspiring.</p>
+              <h3>Nitin Sharma</h3>
+              <h4>Owner of NSM</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- scroll to top button -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+      <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+    </svg></button>
+
+    <!-- footer -->
     <footer >
-        <span class="f1" style="color: #fff; float: left; margin-left: 10vw;">Made with <span style="color: red;">&#10084;</span> by Nitin Sharma <a href="contact-me.html" class="footer-contact"><u>Contact Us</u></span> <span class="f2" style="color: #fff; float: right;"> &copy; 2023 - NSM | All Rights Reserved.
+        <span class="f1" style="color: #fff; float: left; margin-left: 10vw;">Made with <span style="color: red;">&#10084;</span> by Nitin Sharma <a href="contact-me.html" class="footer-contact"><u>Contact Us</u>.</span> <span class="f2" style="color: #fff; float: right;"> &copy; 2023 - AirSchools | NSM | All Rights Reserved.
         </span></a>
     </footer>
 
@@ -288,3 +380,208 @@ if (window.pageYOffset >= sticky) {
     // Add event listeners to navigation buttons
     navBtns.forEach((btn, i) => btn.addEventListener("click", () => gotoSlide(i)));
   </script>
+
+
+<!-- for smooth scrolling -->
+<script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+    
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+    
+          // Store hash
+          var hash = this.hash;
+    
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+    
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+    </script>
+
+<!-- for Frequently asked questions section  -->
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+
+//scroll to top button
+
+// Get the button:
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+</script>
+
+
+
+
+
+
+<!-- for autocomplete on input type text at home -->
+
+<script>
+  function autocomplete(inp, arr) {
+    /*the autocomplete function takes two arguments,
+    the text field element and an array of possible autocompleted values:*/
+    var currentFocus;
+    /*execute a function when someone writes in the text field:*/
+    inp.addEventListener("input", function(e) {
+        var a, b, i, val = this.value;
+        /*close any already open lists of autocompleted values*/
+        closeAllLists();
+        if (!val) { return false;}
+        currentFocus = -1;
+        /*create a DIV element that will contain the items (values):*/
+        a = document.createElement("DIV");
+        a.setAttribute("id", this.id + "autocomplete-list");
+        a.setAttribute("class", "autocomplete-items");
+        /*append the DIV element as a child of the autocomplete container:*/
+        this.parentNode.appendChild(a);
+        /*for each item in the array...*/
+        for (i = 0; i < arr.length; i++) {
+          /*check if the item starts with the same letters as the text field value:*/
+          if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+            /*create a DIV element for each matching element:*/
+            b = document.createElement("DIV");
+            /*make the matching letters bold:*/
+            b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+            b.innerHTML += arr[i].substr(val.length);
+            /*insert a input field that will hold the current array item's value:*/
+            b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+            /*execute a function when someone clicks on the item value (DIV element):*/
+            b.addEventListener("click", function(e) {
+                /*insert the value for the autocomplete text field:*/
+                inp.value = this.getElementsByTagName("input")[0].value;
+                /*close the list of autocompleted values,
+                (or any other open lists of autocompleted values:*/
+                closeAllLists();
+            });
+            a.appendChild(b);
+          }
+        }
+    });
+    /*execute a function presses a key on the keyboard:*/
+    inp.addEventListener("keydown", function(e) {
+        var x = document.getElementById(this.id + "autocomplete-list");
+        if (x) x = x.getElementsByTagName("div");
+        if (e.keyCode == 40) {
+          /*If the arrow DOWN key is pressed,
+          increase the currentFocus variable:*/
+          currentFocus++;
+          /*and and make the current item more visible:*/
+          addActive(x);
+        } else if (e.keyCode == 38) { //up
+          /*If the arrow UP key is pressed,
+          decrease the currentFocus variable:*/
+          currentFocus--;
+          /*and and make the current item more visible:*/
+          addActive(x);
+        } else if (e.keyCode == 13) {
+          /*If the ENTER key is pressed, prevent the form from being submitted,*/
+          e.preventDefault();
+          if (currentFocus > -1) {
+            /*and simulate a click on the "active" item:*/
+            if (x) x[currentFocus].click();
+          }
+        }
+    });
+    function addActive(x) {
+      /*a function to classify an item as "active":*/
+      if (!x) return false;
+      /*start by removing the "active" class on all items:*/
+      removeActive(x);
+      if (currentFocus >= x.length) currentFocus = 0;
+      if (currentFocus < 0) currentFocus = (x.length - 1);
+      /*add class "autocomplete-active":*/
+      x[currentFocus].classList.add("autocomplete-active");
+    }
+    function removeActive(x) {
+      /*a function to remove the "active" class from all autocomplete items:*/
+      for (var i = 0; i < x.length; i++) {
+        x[i].classList.remove("autocomplete-active");
+      }
+    }
+    function closeAllLists(elmnt) {
+      /*close all autocomplete lists in the document,
+      except the one passed as an argument:*/
+      var x = document.getElementsByClassName("autocomplete-items");
+      for (var i = 0; i < x.length; i++) {
+        if (elmnt != x[i] && elmnt != inp) {
+          x[i].parentNode.removeChild(x[i]);
+        }
+      }
+    }
+    /*execute a function when someone clicks in the document:*/
+    document.addEventListener("click", function (e) {
+        closeAllLists(e.target);
+    });
+  }
+  
+  /*An array containing all the country names in the world:*/
+  var countries = ["Class Sixth","Class Seventh","Class Eighth","Class Ninth","Class Tenth","Class Eleventh","Class Twelfth","NCERT Solution","CBSE Updates","AirSchools Notifications","Previous Year Questions","Chapters Summary"];
+  
+  /*initiate the autocomplete function on the "searchbox" element, and pass along the countries array as possible autocomplete values:*/
+  autocomplete(document.getElementById("searchbox"), countries);
+  </script>
+
+
+
+  <!-- for switching tabs -->
+  <!-- <script>
+    function openPage(pageName,elmnt,color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+        // tablinks[i].style.color = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
+    
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script> -->
