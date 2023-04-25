@@ -2,9 +2,13 @@
 
 :root {
     --blue: #96D4D4;
+    --orange: #ff5722;
+    --skyBlue: #2196F3;
+    --red:#f44336;
+    --blue-dark: #7fcece;
     --white: #fff;
     --green-dark: #05a067;
-    --green: #049c64;
+    --green: #04AA6D;
     --black: #282A35;
     --pink: #FFC0C7;
     --pink-dark: #ffb3bc;
@@ -14,10 +18,13 @@
     --peech-blue: #D9EEE1;
     --light-grey: #F3ECEA;
     --toolight-green: #D9EEE1;
-    --red: rgb(255, 35, 35);
+    --redDark: rgb(255, 35, 35);
     --purple: #9763f6;
   }
 
+html {
+scroll-behavior: smooth;
+}
   
 *{
     margin: 0;
@@ -67,6 +74,11 @@ body{
     background-color: var(--purple);
   }
 
+  ::placeholder {
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+  }
 
 .navbar{
     background-color: #fff;
@@ -156,7 +168,7 @@ a:link{
 .menubr span{
     display: inline;
     margin-left: 50px;
-    font-weight: 400;
+    font-weight: 600;
     cursor: pointer;
 }
 
@@ -165,6 +177,7 @@ a:link{
     position: absolute;
     top: 15vh;
     border: 1px solid var(--green);
+    z-index: 99999;
 }
 
 .menubr .navlinks-r ul li{
@@ -172,15 +185,18 @@ a:link{
     /* height: 100px; */
     list-style-type: none;
     background-color: #fff;
-    color: #222;
     padding: 10px 20px;
     font-weight: 500;
     cursor: pointer;
 
 }
 
+.menubr .navlinks-r ul li, .menubr .navlinks-r ul li a{
+    color: #222;
+}
 
-.menubr .navlinks-r ul li:hover{
+
+.menubr .navlinks-r ul li:hover, .menubr .navlinks-r ul li a:hover{
     color: var(--white);
     background-color: var(--green);
 }
@@ -189,12 +205,18 @@ a:link{
     display: none;
     justify-content: center;
     align-items: center;
+    z-index: 999999999; /*to let it come upwards on first main section*/
+}
+
+.menuphone span{
+    cursor: pointer;
+    font-weight: 600;
 }
 
 .menuphone .navlinks-r{
     display: none;
     background-color: var(--black);
-    height: 100vh;
+    height: 60vh;
     width: 50vw;
     position: absolute;
     top: 15vh;
@@ -205,10 +227,13 @@ a:link{
 
 .menuphone ul li{
     list-style-type: none;
-    color: #fff;
     margin-top: 30px;
     font-size: 1.5em;
     cursor: pointer;
+}
+
+.menuphone ul li, .menuphone ul li a{
+    color: #fff;
 }
 
 /* .navlinks-r ul{
@@ -227,7 +252,7 @@ a:link{
 } */
 
 .main{
-    margin-top: 79px;
+    /* margin-top: 79px; */
     background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(res/banner.jpg);
     background-position: center;
     background-size: cover;
@@ -262,13 +287,54 @@ a:link{
     margin-top: 20px;
     padding: 10px;
     font-size: 17px;
+    font-weight: 600;
     border: 1px solid #282A35;
     border-radius: 25px;
     width: 500px;
     padding-left: 25px;
     background: white;
     outline: 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
+
+/*the container must be positioned relative:*/
+.autocomplete {
+    position: relative;
+    display: inline-block;
+}
+
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #222;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+  
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff; 
+    border-bottom: 1px solid #222; 
+  }
+  
+  /*when hovering an item:*/
+  .autocomplete-items div:hover {
+    background-color: var(--yellow); 
+  }
+  
+  /*when navigating through the items using the arrow keys:*/
+  .autocomplete-active {
+    background-color: var(--yellow) !important; 
+    color: #222; 
+  }
 
 .content .sub-text{
     margin-top: 20px;
@@ -279,7 +345,12 @@ a:link{
     cursor: help;
 }
 
-.content .sub-text:hover{
+.content .sub-text a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.content .sub-text a:hover, .content .sub-text:hover{
     color: var(--green);
 }
 
@@ -589,6 +660,274 @@ transition: background-color 0.5s ease-in-out;
 background-color: var(--green);
 }
 
+
+/* frequently asked questions */
+.qContainer{
+    height: 110vh;
+    width: 99.6vw;
+    background-color: var(--green);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.qContainer h1{
+    color: #fff;
+    font-size: 2.6em;
+}
+
+.question{
+  margin-top: -20vh;
+}
+
+
+.accordion {
+    background-color: #fff;
+    color: #222;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 18px;
+    /* width: 100%; */
+    width: 70vw;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1em;
+    transition: 0.4s;
+  }
+  
+  .active, .accordion:hover {
+    background-color: var(--yellow);
+  }
+  
+  .accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #222;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+  
+  .panel {
+    padding: 0 18px;
+    text-align: left;
+    width: 70vw;
+    background-color: var(--light-pink);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+/* scroll to top button */
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  #myBtn:hover {
+    background-color: var(--purple); /* Add a dark-grey background on hover */
+  }
+
+  /* shaking effect on every image*/
+  .right img:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+  /* testimonal (about nitin) */
+
+  .testimonial{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .users{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('res/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .users *{
+    z-index: 2;
+  }
+  
+  .users .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 1;
+  }
+  
+  .headerT h1{
+    position: relative;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: 20px;
+  }
+  
+  .headerT h1::before{
+    content: '';
+    width: 120px;
+    height: 2px;
+    background-color: var(--green);
+    border-radius: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+  }
+  
+  .headerT h1::after{
+    content: '';
+    width: 70px;
+    height: 2px;
+    background-color: var(--green);
+    border-radius: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -18px;
+  }
+  
+  .testContainer{
+    width: 70%;
+  }
+  
+  .testContainer .testRow{
+    display: flex;
+  }
+  
+  .testItem{
+    min-width: 100%;
+    text-align: center;
+  }
+  
+  .testRow .testItem img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    outline: 2px solid #eee;
+    outline-offset: 2px;
+    margin: 45px 0 10px;
+  }
+  
+  .testRow .testItem p{
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    padding: 10px;
+  
+  }
+  
+  .testRow .testItem h3{
+    font-size: 30px;
+    padding: 5px;  
+  }
+
+  .testRow .testItem h4{
+    letter-spacing: 0.8px;
+    color: var(--pink-dark);
+  }
+  
+
+  /* tabs section goes  here */
+ 
+/* .tabs{
+    height: 100vh;
+    width: 99.6vw;
+} */
+
+/* Style tab links */
+/* .tablink {
+    background-color: #eee;
+    color: #222;
+    font-weight: 600;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+  }
+  
+  .tablink:hover {
+    background-color: #ece5e5;
+  } */
+  
+  /* Style the tab content (and add height:100% for full page content) */
+  /* .tabcontent {
+    color: #222;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+  }
+
+  #Home {background-color: var(--red);}
+  #News {background-color: var(--green);}
+  #Contact {background-color: var(--skyBlue);}
+  #About {background-color: var(--orange);} */
+
+  /* @media (max-width: 500px) {
+    .users {
+        text-align: center;
+    }
+    .users img {
+        margin: auto;
+        float: none;
+        display: block;
+    }
+  } */
+
+
 /* making responsive */
 @media only screen and (max-width: 1080px) {
 
@@ -643,7 +982,7 @@ background-color: var(--green);
     }
 
     .sec-six .class, .sec-seven .class, .sec-eighth .class, .sec-nine .class, .sec-ten .class, .sec-eleven .class, .sec-twelfth .class{ 
-        font-size: 4.4em;
+        font-size: 4.5em;
     }
 
     .left{
@@ -675,4 +1014,18 @@ background-color: var(--green);
     .makeslide{
         width: 100vw;
     }
+
+    .qContainer{
+        height: 120vh;
+        width: 100vw;
+    }
+
+    .accordion{
+        width: 100%;
+    }
+
+    .panel{
+        width: auto;
+    }
+
   }
