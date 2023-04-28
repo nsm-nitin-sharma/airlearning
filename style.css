@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
-/* taking colors as a variable */
+
 :root {
     --blue: #96D4D4;
     --orange: #ff5722;
@@ -878,6 +878,90 @@ background-color: var(--green);
   }
   
 
+  /* vision section */
+  .vision{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--peech-blue);
+  }
+
+  .v-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
+    border: 5px solid #222;
+    padding: 20px 10px;
+    width: 80vw;
+    /* animation: vision 1.5s linear infinite; */
+  }
+
+  .v-content h1{
+    margin: 2vh 0 4vh 0;
+    text-align: center;
+    font-size: 2.6em;
+  }
+
+  .v-content p{
+    margin: 0 2vw 0 2vw;
+    font-size: 20px;
+    letter-spacing: 0.6px;
+  }
+
+  .vSocial{
+    margin-top: 10vh;
+  }
+
+  .vSocial span{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: #222;
+    color: #fff;
+    padding: 10px 10px;
+    border-radius: 50%;
+    margin-right: 2vw;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  .vSocial span:first-child:hover{
+    color: #00acee;
+  }
+
+  .fb:hover{
+    color: #3b5998;
+  }
+
+  .yt:hover{
+    color: 	#FF0000;
+  }
+
+  .insta:hover{
+    color: #d62976;
+  }
+
+/* 
+
+  @keyframes vision {
+    0%{
+        border: 1px solid #222;
+    }
+
+    50%{
+        border: 5px solid #222;
+    }
+
+    100%{
+        border: 1px solid #222;
+    }
+  } */
+
   /* tabs section goes  here */
  
 /* .tabs{
@@ -1027,5 +1111,21 @@ background-color: var(--green);
     .panel{
         width: auto;
     }
+
+  .vision{
+    height: 120vh;
+  }
+
+  .v-remove{
+    display: none;
+  }
+
+  .v-content h1{
+    font-size: 2em;
+  }
+
+  .vSocial{
+    margin-top: 3vh;
+  }
 
   }
