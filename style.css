@@ -1,3 +1,7 @@
+/* source sans pro */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap');
+
+/* roboto */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
@@ -34,6 +38,7 @@ scroll-behavior: smooth;
 
 body{
     font-family: 'Roboto', sans-serif;
+    /* font-family: 'Source Sans Pro', sans-serif; */
 }
 
 /* on selecting text */
@@ -253,7 +258,7 @@ a:link{
 
 .main{
     /* margin-top: 79px; */
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(res/banner.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(res/bg2.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -281,6 +286,34 @@ a:link{
     font-size: 1.5em;
     font-weight: 500;
     color: var(--pink);
+}
+
+.low-text::after {
+  content: "|";
+  
+  color: var(--pink-dark);
+  font-size: 1.2em;
+  /* margin: 0 0.1em; */
+  opacity: 0;
+  animation: blink-caret 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 .content input[type=search]{
@@ -777,10 +810,11 @@ background-color: var(--green);
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background-image: url('res/banner.jpg');
+    background-image: url('res/test-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     color: #eee;
     display: flex;
     justify-content: center;
@@ -798,7 +832,7 @@ background-color: var(--green);
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
   }
   
@@ -1020,8 +1054,9 @@ background-color: var(--green);
         width: 100vw;
     }
 
-    .logo{
-        font-size: 1em;
+    
+    .navbar .logo{
+        font-size: 1.7em;
     }
     .content .main-text {
         font-size: 3em;
@@ -1037,7 +1072,16 @@ background-color: var(--green);
 
     .menuphone{
         display: flex;
-        margin-left: 0vw;
+        margin-left: 1vw;
+    }
+
+    .menuphone span{
+      margin-right: 1vw;
+      background-color: var(--yellow-dark);
+      border-radius: 50px;
+      /* width: 130px; */
+      padding: 10px 20px;
+      text-align: center;
     }
 
     .menuphone .navlinks-r{
