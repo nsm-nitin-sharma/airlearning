@@ -32,140 +32,154 @@
 </body>
 </html>
 
+
 <style>
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-
-:root {
-    --blue: #96D4D4;
-    --white: #fff;
-    --green-dark: #05a067;
-    --green: #04AA6D;
-    --black: #282A35;
-    --pink: #FFC0C7;
-    --pink-dark: #ffb3bc;
-    --light-pink:  #ffe6f2;
-    --yellow: #FFF4A3;
-    --yellow-dark: #faeb75;
-    --peech-blue: #D9EEE1;
-    --light-grey: #F3ECEA;
-    --toolight-green: #D9EEE1;
-    --red: rgb(255, 35, 35);
-    --purple: #9763f6;
-  }
-
-  
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    font-family: 'Roboto', sans-serif;
-}
-
-/* on selecting text */
-::selection{
-    background-color: rgba(4, 156, 100, 0.5);
-}
-
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.left{
-    height: 100vh;
-    width: 50vw;
-    background-color: var(--green);
-}
-
-.right{
-    height: 100vh;
-    width: 50vw;
-    background-color: var(--yellow-dark);
-}
-
-.content{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    height: 90vh;
-    width: 90vw;
-    border-radius: 20px;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.5);
-}
-
-.content h1{
-    font-size: 2.5em;
-    color: var(--green);
-}
-
-.content p{
-    margin-top: -90px;
-    font-weight: 500;
-}
-
-.book{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-top: -5vh;
-}
-
-.eng,.hin,.mat,.sci,.soc,.ex{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 25vh;
-    width: 20vw;
-    font-size: 1.5em;
-    font-weight: 500;
-    margin: 0 20px 20px 0px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.eng:hover,.hin:hover,.mat:hover,.sci:hover,.soc:hover,.ex:hover{
-    font-size: 1.7em;
-}
-
-.eng{
-    background-color: var(--pink);
-}
-
-.hin{
-    background-color: var(--yellow);
-}
-
-.mat{
-    background-color: var(--green);
-    color: var(--white);
-}
-
-.sci{
-    background-color: var(--black);
-    color: var(--white);
-}
-
-.soc{
-    background-color: var(--blue);
-}
-
-.ex{
-    background-color: var(--purple);
-    color: var(--white);
-}
-
-</style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+    
+    
+    :root {
+        --blue: #96D4D4;
+        --white: #fff;
+        --green-dark: #05a067;
+        --green: #04AA6D;
+        --black: #282A35;
+        --pink: #FFC0C7;
+        --pink-dark: #ffb3bc;
+        --light-pink:  #ffe6f2;
+        --yellow: #FFF4A3;
+        --yellow-dark: #faeb75;
+        --peech-blue: #D9EEE1;
+        --light-grey: #F3ECEA;
+        --toolight-green: #D9EEE1;
+        --red: rgb(255, 35, 35);
+        --purple: #9763f6;
+        }
+    
+        
+    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body{
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    /* on selecting text */
+    ::selection{
+        background-color: rgba(4, 156, 100, 0.5);
+    }
+    
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .left{
+        height: 100vh;
+        width: 50vw;
+        background-color: var(--green);
+    }
+    
+    .right{
+        height: 100vh;
+        width: 50vw;
+        background-color: var(--yellow-dark);
+    }
+    
+    .content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        height: 90vh;
+        width: 90vw;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.5);
+        overflow: scroll;
+    }
+    
+    .content h1{
+        margin-top: 2vh;
+        font-size: 2.5em;
+        color: var(--green);
+    }
+    
+    .content p{
+        margin-top: 2vh;
+        font-weight: 600;
+    }
+    
+    .book{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5vh;
+    }
+    
+    .eng,.hin,.mat,.sci,.soc,.ex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 170px;
+        width: 250px;
+        font-size: 1.5em;
+        font-weight: 500;
+        margin: 0 20px 20px 0px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    
+    .eng:hover,.hin:hover,.mat:hover,.sci:hover,.soc:hover,.ex:hover{
+        font-size: 1.7em;
+    }
+    
+    .eng{
+        background-color: var(--pink);
+    }
+    
+    .hin{
+        background-color: var(--yellow);
+    }
+    
+    .mat{
+        background-color: var(--green);
+        color: var(--white);
+    }
+    
+    .sci{
+        background-color: var(--black);
+        color: var(--white);
+    }
+    
+    .soc{
+        background-color: var(--blue);
+    }
+    
+    .ex{
+        background-color: var(--purple);
+        color: var(--white);
+    }
+    
+    @media only screen and (max-width: 1080px){
+        .eng,.hin,.mat,.sci,.soc,.ex{
+            margin: 20px auto auto auto;
+        }
+    
+    .book{
+        margin-top: 70vh;
+    }
+    }
+    
+    </style>
